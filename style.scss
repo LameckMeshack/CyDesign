@@ -1,0 +1,25 @@
+// variables
+$primary-font-color: #fff;
+$primary-font-color-dark: #000;
+$primary-font-color-light: #414141;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+topbar {
+  .left-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 0;
+    background-color: #000;
+    padding-right: 50px;
+  }
+  a {
+    color: $primary-font-color;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+}

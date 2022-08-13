@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+topbar .left-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 0;
+  background-color: #000;
+  padding-right: 50px;
+}
+topbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
