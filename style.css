@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/map.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
 topbar .left-menu {
   display: flex;
   align-items: center;
@@ -17,4 +27,60 @@ topbar a {
   text-decoration: none;
   margin: 10px;
   font-size: 1.5rem;
+}
+topbar a:hover {
+  color: #000;
+}
+
+navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+navbar .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+navbar .menu ul {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+  margin-left: 350px;
+  list-style: none;
+}
+navbar .menu ul li {
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+navbar .menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+navbar .menu ul li a:hover {
+  color: #000;
+}
+navbar button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 230px;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+navbar button:hover {
+  background-color: #000;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
