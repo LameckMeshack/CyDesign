@@ -12,10 +12,14 @@ $primary-font-color-light: #e0e7e7;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/images/map.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  height: fit-content;
+  background-repeat: no-repeat;
+  height: max-content;
   width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  // align-items: center;
 }
 @mixin container {
   display: flex;
@@ -46,7 +50,7 @@ topbar {
   a {
     @include a;
     margin: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -54,46 +58,45 @@ topbar {
 navbar {
   @include container;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   .menu {
     @include container;
     width: 100%;
-    // .logo {
-    //   //   display: flex;
-    //   //   align-items: center;
-    //   //   justify-content: center;
-    // }
+
     ul {
       display: flex;
       align-items: center;
-      margin-left: 350px;
+      width: 90%;
+      margin-left: 60px;
+      padding-left: 30px;
+      justify-content: space-between;
       list-style: none;
       li {
-        font-size: 1.5rem;
-        margin-left: 30px;
+        font-size: 1rem;
+        margin-left: 20px;
         a {
           @include a;
           font-weight: 500;
           text-transform: uppercase;
         }
+        button {
+          background-color: #fff;
+          color: $primary-font-color-dark;
+          border: none;
+          padding: 10px;
+          font-size: 1rem;
+          width: 230px;
+          padding: 15px;
+          border-radius: 30px;
+          font-weight: 600;
+          cursor: pointer;
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
       }
-    }
-  }
-  button {
-    background-color: #fff;
-    color: $primary-font-color-dark;
-    border: none;
-    padding: 10px;
-    font-size: 1.5rem;
-    width: 230px;
-    padding: 15px;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover {
-      background-color: #000;
-      color: #fff;
     }
   }
 }
@@ -101,27 +104,28 @@ navbar {
 .text-cont {
   @include container;
   flex-direction: column;
-  padding: 50px 200px;
+  padding: 30px 100px;
   width: 50%;
   margin-left: auto;
   align-items: flex-start;
+  line-height: 2rem;
   h1,
   h2 {
     color: #fff;
     margin-bottom: 20px;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 300;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 300;
   }
   p,
   li {
     color: $primary-font-color-light;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   p {
     margin-bottom: 20px;
@@ -168,8 +172,6 @@ navbar {
       color: $primary-font-color;
       padding: 30px 10px;
       margin: 20px;
-      // width: 200px;
-      // height: 200px;
       h1 {
         font-size: 3rem;
         font-weight: 300;
@@ -233,7 +235,6 @@ navbar {
     }
   }
   .right {
-    // image-background
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcYkNnvMNUPjTb6I4ivdBNBuyFslSyVwv9Mw&usqp=CAU");
     background-size: cover;
     background-repeat: no-repeat;
@@ -317,8 +318,6 @@ footer {
           }
         }
       }
-    }
-    .sqr-btn {
     }
   }
 }
