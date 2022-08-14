@@ -93,12 +93,13 @@ navbar .menu ul li button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
+  margin: auto;
   flex-direction: column;
-  padding: 30px 100px;
-  width: 50%;
+  padding: 30px;
+  padding-left: 700px;
   margin-left: auto;
   align-items: flex-start;
-  line-height: 2rem;
 }
 .text-cont h1,
 .text-cont h2 {
@@ -113,16 +114,36 @@ navbar .menu ul li button:hover {
   font-size: 1.3rem;
   font-weight: 300;
 }
-.text-cont p,
+.text-cont .p,
 .text-cont li {
   color: #e0e7e7;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-cont p {
   margin-bottom: 20px;
 }
 .text-cont ul {
   margin-left: 20px;
+}
+
+.learn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.learn .play-text h3 {
+  font-size: 1rem;
+  line-height: 1rems;
+  color: #e0e7e7;
+}
+.learn .play-text span {
+  color: #fff;
+  line-height: normal;
+  font-size: 0.8rem;
 }
 
 .middle {
@@ -135,7 +156,7 @@ navbar .menu ul li button:hover {
 }
 .middle .fee-container,
 .middle .our {
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -143,7 +164,7 @@ navbar .menu ul li button:hover {
   align-items: center;
 }
 .middle .mem-title {
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   font-size: 2.5rem;
   font-weight: 300;
@@ -152,14 +173,14 @@ navbar .menu ul li button:hover {
   align-self: flex-start;
 }
 .middle .we-offer {
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   justify-content: space-between;
   font-weight: 300;
   margin-bottom: 10px;
@@ -169,7 +190,7 @@ navbar .menu ul li button:hover {
   color: orange;
 }
 .middle .fee-container {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   margin-bottom: 20px;
   justify-content: space-between;
@@ -181,12 +202,12 @@ navbar .menu ul li button:hover {
   margin: 20px;
 }
 .middle .fee-container .fee-box h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 10px;
 }
 .middle .fee-container .fee-box h1 span {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -195,7 +216,7 @@ navbar .menu ul li button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   margin-top: 20px;
 }
@@ -222,11 +243,11 @@ navbar .menu ul li button:hover {
   margin-bottom: 10px;
 }
 .pic .left h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
 }
 .pic .left p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
   margin-bottom: 30px;
 }
@@ -235,7 +256,7 @@ navbar .menu ul li button:hover {
   color: #000;
   border: none;
   padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 230px;
   padding: 15px;
   border-radius: 30px;
@@ -267,7 +288,7 @@ navbar .menu ul li button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   flex-direction: column;
   color: #fff;
@@ -277,14 +298,14 @@ navbar .menu ul li button:hover {
 .join-cont p {
   margin-bottom: 20px;
   line-height: 40px;
-  font-size: 30px;
+  font-size: 1rem;
 }
 .join-cont button {
   background-color: orange;
   color: #fff;
   border: none;
   padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 230px;
   padding: 15px;
   border-radius: 30px;
@@ -317,7 +338,7 @@ footer .footer-cont .footer-column {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
@@ -327,8 +348,8 @@ footer .footer-cont .footer-column {
   padding-left: 0;
 }
 footer .footer-cont .footer-column h1 {
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 0.8rem;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -336,7 +357,7 @@ footer .footer-cont .footer-column ul {
   list-style: none;
 }
 footer .footer-cont .footer-column ul li {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 200;
   margin-bottom: 10px;
 }
@@ -354,7 +375,7 @@ footer .footer-cont .footer-column ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   align-items: center;
   justify-content: space-between;
@@ -364,14 +385,14 @@ footer .footer-cont .footer-column ul li a:hover {
 }
 
 .bottom {
-  max-width: 1260px;
+  max-width: 1200px;
   margin: auto;
   margin-top: 30px;
   color: #e0e7e7;
   align-self: flex-start;
 }
 .bottom > * {
-  width: 1260px;
+  width: 1200px;
 }
 .bottom p {
   font-size: 15px;
@@ -395,7 +416,7 @@ footer .footer-cont .footer-column ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1260px;
+  width: 1200px;
   font-size: 18px;
   font-weight: 200;
   align-items: center;
