@@ -350,12 +350,25 @@ footer {
       color: orange;
       font-weight: 600;
     }
+    .term {
+      margin-right: 300px;
+      color: $primary-font-color-light;
+      font-weight: 100;
+    }
   }
   hr {
     border: 0.8px solid #e0e7e7;
   }
-  .bot {
+  .btm {
+    @include container;
+    width: 1260px;
     font-size: 18px;
     font-weight: 200;
+    align-items: center;
+    justify-content: space-between;
+
+    > :last-child {
+      margin-right: 0px;
+    }
   }
 }

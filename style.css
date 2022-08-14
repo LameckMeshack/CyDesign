@@ -372,10 +372,25 @@ footer .footer-cont .footer-column ul li a:hover {
   color: orange;
   font-weight: 600;
 }
+.bottom p .term {
+  margin-right: 300px;
+  color: #e0e7e7;
+  font-weight: 100;
+}
 .bottom hr {
   border: 0.8px solid #e0e7e7;
 }
-.bottom .bot {
+.bottom .btm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1260px;
   font-size: 18px;
   font-weight: 200;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom .btm > :last-child {
+  margin-right: 0px;
 }/*# sourceMappingURL=style.css.map */
