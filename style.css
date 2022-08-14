@@ -4,13 +4,14 @@
   padding: 0;
 }
 
-section {
+.banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/map.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
 }
 
@@ -83,4 +84,100 @@ navbar button {
 navbar button:hover {
   background-color: #000;
   color: #fff;
+}
+
+.text-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 200px;
+  width: 50%;
+  margin-left: auto;
+  align-items: flex-start;
+}
+.text-cont h1,
+.text-cont h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.text-cont h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.text-cont h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.text-cont p,
+.text-cont li {
+  color: #e0e7e7;
+  font-size: 1.5rem;
+}
+.text-cont p {
+  margin-bottom: 20px;
+}
+.text-cont ul {
+  margin-left: 20px;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.middle .fee-container,
+.middle .our {
+  max-width: 1260px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.middle .mem-title {
+  max-width: 1260px;
+  margin: auto;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  background-color: aquamarine;
+}
+.middle .we-offer {
+  max-width: 1260px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.middle .fee-container {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.middle .fee-container .fee-box {
+  text-align: left;
+  border: #000 1px solid;
+  padding: 20px 5px;
+  margin: 20px;
+}
+.middle .fee-container .fee-box h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.middle .fee-container .fee-box h1 span {
+  font-size: 1.5rem;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

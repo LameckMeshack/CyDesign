@@ -1,21 +1,20 @@
 // variables
 $primary-font-color: #fff;
 $primary-font-color-dark: #000;
-$primary-font-color-light: #414141;
+$primary-font-color-light: #e0e7e7;
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-section {
+.banner {
   //image-background
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/images/map.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
+  height: fit-content;
   width: 100%;
 }
 @mixin container {
@@ -23,6 +22,10 @@ section {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@mixin width {
+  max-width: 1260px;
+  margin: auto;
 }
 @mixin a {
   color: $primary-font-color;
@@ -92,6 +95,88 @@ navbar {
     &:hover {
       background-color: #000;
       color: #fff;
+    }
+  }
+}
+
+.text-cont {
+  @include container;
+  flex-direction: column;
+  padding: 50px 200px;
+  width: 50%;
+  margin-left: auto;
+  align-items: flex-start;
+  h1,
+  h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  p,
+  li {
+    color: $primary-font-color-light;
+    font-size: 1.5rem;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-left: 20px;
+  }
+}
+.middle {
+  @include container;
+  flex-direction: column;
+  padding: 20px;
+
+  .fee-container,
+  .our {
+    @include width;
+    @include container;
+  }
+  .mem-title {
+    @include width;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    align-self: flex-start;
+    background-color: aquamarine;
+  }
+  .we-offer {
+    @include width;
+    @include container;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .fee-container {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    .fee-box {
+      text-align: left;
+      border: #000 1px solid;
+      padding: 20px 5px;
+      margin: 20px;
+      h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+        span {
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+      }
     }
   }
 }
