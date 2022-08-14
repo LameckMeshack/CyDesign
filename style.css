@@ -290,14 +290,17 @@ navbar button:hover {
 footer {
   width: 100%;
   background-color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 footer .footer-cont {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 1260px;
-  margin: auto;
   padding-top: 20px;
 }
 footer .footer-cont .footer-column {
@@ -311,7 +314,7 @@ footer .footer-cont .footer-column {
   align-items: flex-start;
   justify-content: center;
   color: #fff;
-  margin-right: 110px;
+  width: 300px;
   padding-left: 0;
 }
 footer .footer-cont .footer-column h1 {
@@ -335,4 +338,44 @@ footer .footer-cont .footer-column ul li a {
 }
 footer .footer-cont .footer-column ul li a:hover {
   color: #000;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1260px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.social img {
+  margin-right: 30px;
+}
+
+.bottom {
+  max-width: 1260px;
+  margin: auto;
+  margin-top: 30px;
+  color: #e0e7e7;
+  align-self: flex-start;
+}
+.bottom > * {
+  width: 1260px;
+}
+.bottom p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 40px;
+}
+.bottom p span {
+  color: orange;
+  font-weight: 600;
+}
+.bottom hr {
+  border: 0.8px solid #e0e7e7;
+}
+.bottom .bot {
+  font-size: 18px;
+  font-weight: 200;
 }/*# sourceMappingURL=style.css.map */

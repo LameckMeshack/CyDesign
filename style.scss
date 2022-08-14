@@ -281,9 +281,12 @@ navbar {
 footer {
   width: 100%;
   background-color: #000;
+  @include container;
+  flex-direction: column;
+
   .footer-cont {
     @include container;
-    @include width;
+
     padding-top: 20px;
 
     .footer-column {
@@ -293,8 +296,7 @@ footer {
       align-items: flex-start;
       justify-content: center;
       color: #fff;
-
-      margin-right: 110px;
+      width: 300px;
       padding-left: 0;
 
       h1 {
@@ -316,5 +318,44 @@ footer {
         }
       }
     }
+    .sqr-btn {
+    }
+  }
+}
+
+.social {
+  @include container;
+  @include width;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    margin-right: 30px;
+  }
+}
+
+.bottom {
+  @include width;
+  margin-top: 30px;
+  color: #e0e7e7;
+  align-self: flex-start;
+  > * {
+    width: 1260px;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 40px;
+    span {
+      color: orange;
+      font-weight: 600;
+    }
+  }
+  hr {
+    border: 0.8px solid #e0e7e7;
+  }
+  .bot {
+    font-size: 18px;
+    font-weight: 200;
   }
 }
