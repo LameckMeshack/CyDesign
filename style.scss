@@ -309,8 +309,10 @@ footer {
   flex-direction: column;
 
   .footer-cont {
+    @include width;
+    width: 100%;
     @include container;
-
+    justify-content: space-around;
     padding-top: 20px;
 
     .footer-column {
