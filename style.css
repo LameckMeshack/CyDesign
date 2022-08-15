@@ -507,8 +507,7 @@ footer .footer-cont .footer-column ul li a:hover {
 }
 @media only screen and (max-width: 481px) {
   .bottom {
-    width: 481px;
-    padding: 10px;
+    max-width: 100%;
   }
 }
 .bottom > * {
@@ -534,12 +533,17 @@ footer .footer-cont .footer-column ul li a:hover {
   color: #e0e7e7;
   font-weight: 100;
 }
+@media only screen and (max-width: 481px) {
+  .bottom p .term {
+    margin-right: 0;
+  }
+}
 .bottom hr {
   border: 0.8px solid #e0e7e7;
 }
 @media only screen and (max-width: 481px) {
   .bottom hr {
-    width: 481px;
+    width: 100%;
   }
 }
 .bottom .btm {
@@ -555,7 +559,9 @@ footer .footer-cont .footer-column ul li a:hover {
 }
 @media only screen and (max-width: 481px) {
   .bottom .btm {
-    width: 481px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .bottom .btm > :last-child {
