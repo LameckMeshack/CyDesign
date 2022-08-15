@@ -21,6 +21,23 @@ $primary-font-color-light: #e0e7e7;
   // flex-direction: column;
   // align-items: center;
 }
+// mixin for break point
+@mixin devices($breakpoint) {
+  //the name of the mixin is devices
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 481px) {
+      @content;
+    }
+  }
+}
+
 @mixin container {
   display: flex;
   flex-direction: row;
@@ -46,9 +63,16 @@ topbar {
     margin-right: 0;
     background-color: #000;
     padding-right: 50px;
+    @include devices(mobile) {
+      justify-content: center;
+      padding-right: 0;
+    }
   }
   a {
     @include a;
+    @include devices(mobile) {
+      margin: 10px;
+    }
     margin: 10px;
     font-size: 1rem;
   }
@@ -65,6 +89,25 @@ navbar {
     width: 100%;
 
     ul {
+      @include devices(mobile) {
+        display: none;
+        // display: flex;
+
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        // width: 100%;
+        // padding: 0;
+        // margin: 0;
+        // li {
+        //   margin: 8px;
+        //   font-size: 7px;
+        //   font-weight: lighter;
+        //   a {
+        //     @include a;
+        //   }
+        // }
+      }
       display: flex;
       align-items: center;
       width: 90%;
@@ -102,6 +145,10 @@ navbar {
 }
 
 .text-cont {
+  @include devices(mobile) {
+    padding: 10px;
+    width: 90%;
+  }
   @include container;
   @include width;
   flex-direction: column;
@@ -137,14 +184,28 @@ navbar {
   }
 }
 .learn {
+  @include devices(mobile) {
+    padding: 10px;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
   @include container;
   width: 100%;
   justify-content: flex-start;
+
   .play-text {
     h3 {
       font-size: 1rem;
       line-height: 1rems;
       color: $primary-font-color-light;
+      @include devices(mobile) {
+        font-size: 0.7rem;
+        span {
+          font-size: 0.3rem;
+        }
+      }
     }
     span {
       color: #fff;
@@ -166,6 +227,10 @@ navbar {
   }
   .mem-title {
     @include width;
+
+    @include devices(mobile) {
+      font-size: 1.2rem;
+    }
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 20px;
@@ -181,6 +246,10 @@ navbar {
     font-weight: 300;
     margin-bottom: 10px;
     align-items: center;
+    @include devices(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     span {
       color: orange;
     }
@@ -190,12 +259,23 @@ navbar {
     font-weight: 300;
     margin-bottom: 20px;
     justify-content: space-between;
+    @include devices(mobile) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
 
     .fee-box {
       text-align: left;
       color: $primary-font-color;
       padding: 30px 10px;
       margin: 20px;
+      @include devices(mobile) {
+        align-self: center;
+        margin: 10px 0;
+      }
       h1 {
         font-size: 1.5rem;
         font-weight: 300;
@@ -212,7 +292,20 @@ navbar {
 .pic {
   @include container;
   @include width;
+  @include devices(mobile) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    // h2 {
+    //   font-size: 1rem;
+    // }
+  }
   margin-top: 20px;
+  @mixin img {
+    height: 300px;
+    width: 300px;
+  }
   .left {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9rskWdNxqWm05PV6wDIh2bVpDnWBFt6lMOfMODCkW&s");
     background-size: cover;
@@ -220,6 +313,11 @@ navbar {
     background-position: center;
     height: 500px;
     width: 620px;
+    @include devices(mobile) {
+      @include img;
+      padding-top: 70px;
+      margin-right: 10px;
+    }
     margin-right: 30px;
     @include container;
     flex-direction: column;
@@ -232,13 +330,16 @@ navbar {
       margin-bottom: 10px;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1rem;
       font-weight: 300;
     }
     p {
       font-size: 1rem;
       font-weight: 300;
       margin-bottom: 30px;
+      @include devices(mobile) {
+        margin-bottom: 15px;
+      }
     }
     button {
       background-color: #fff;
@@ -265,6 +366,9 @@ navbar {
     background-position: center;
     height: 500px;
     width: 620px;
+    @include devices(mobile) {
+      @include img;
+    }
     margin-left: 0;
   }
 }
@@ -314,17 +418,25 @@ footer {
     @include container;
     justify-content: space-around;
     padding-top: 20px;
+    @include devices(mobile) {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .footer-column {
       @include container;
       @include width;
       flex-direction: column;
       align-items: flex-start;
+
+      @include devices(mobile) {
+        align-items: inherit;
+      }
       justify-content: center;
       color: #fff;
       width: 300px;
       padding-left: 0;
-
       h1 {
         font-size: 1rem;
         line-height: 0.8rem;
@@ -357,11 +469,20 @@ footer {
     margin-right: 30px;
   }
 }
+.sqr-btn {
+  @include devices(mobile) {
+    display: none;
+  }
+}
 
 .bottom {
   @include width;
   margin-top: 30px;
   color: #e0e7e7;
+  @include devices(mobile) {
+    width: 481px;
+    padding: 10px;
+  }
   align-self: flex-start;
   > * {
     width: 1200px;
@@ -370,6 +491,10 @@ footer {
     font-size: 15px;
     font-weight: 300;
     line-height: 40px;
+    @include devices(mobile) {
+      line-height: 20px;
+      font-size: 10px;
+    }
     span {
       color: orange;
       font-weight: 600;
@@ -382,10 +507,16 @@ footer {
   }
   hr {
     border: 0.8px solid #e0e7e7;
+    @include devices(mobile) {
+      width: 481px;
+    }
   }
   .btm {
     @include container;
     width: 1200px;
+    @include devices(mobile) {
+      width: 481px;
+    }
     font-size: 18px;
     font-weight: 200;
     align-items: center;
